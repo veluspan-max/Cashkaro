@@ -1,0 +1,163 @@
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 48rem) {
+  /* Display */
+  .d-md-block { display: block; }
+  
+  /* Typography Responsive */
+  .fs-md-15px { font-size: var(--fs-15); }
+  .fs-md-14px { font-size: var(--fs-14); }
+  .fs-md-16px { font-size: var(--fs-base); }
+  .fs-md-18px { font-size: var(--fs-lg); }
+  .fs-md-24px { font-size: var(--fs-2xl); }
+  .font-md-semibold { font-weight: var(--font-semibold); }
+  .font-md-extrabold { font-weight: var(--font-extrabold); }
+  
+  .leading-md-5 { line-height: 1.25rem; }
+  .leading-md-6 { line-height: 1.5rem; }
+  .leading-md-18px { line-height: var(--fs-lg); }
+  .leading-md-11px { line-height: 0.6875rem; }
+  
+  .line-clamp-1-md {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .whitespace-md-nowrap { white-space: nowrap; }
+
+  /* Spacing Responsive */
+  .my-md-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .px-md-5 { padding-inline: var(--spacing-5); }
+  .ps-5 { padding-inline-start: var(--spacing-5); }
+  .px-md-10 { padding-inline: 2.5rem; }
+  .p-md-2 { padding: var(--spacing-2); }
+  .pb-md-5 { padding-bottom: var(--spacing-5); }
+  .py-md-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .ms-md-4 { margin-inline-start: var(--spacing-4); }
+  .me-md-4 { margin-inline-end: var(--spacing-4); }
+  .my-md-4 { margin-block: var(--spacing-4); }
+  .mt-md-0 { margin-top: 0; }
+  .mb-md-3 { margin-bottom: var(--spacing-3); }
+  .mb-md-4 { margin-bottom: var(--spacing-4); }
+  .py-md-8 { padding-block: var(--spacing-8); }
+
+  /* Sizing Responsive */
+  .w-md-full { width: 100%; }
+  .w-md-90 { width: 90%; }
+  .w-md-auto { width: auto; }
+  .w-md-136px { width: 8.5rem; }
+  .w-md-192px { width: 12rem; }
+  .max-w-md-90 { max-width: 90%; }
+  
+  .h-md-31px { height: 1.9375rem; }
+  .h-md-40px { height: 2.5rem; }
+  .h-md-64px { height: 4rem; }
+  .h-md-65px { height: 65px; }
+  .h-md-82px { height: 5.125rem; }
+  .h-md-88px { height: 5.5rem; }
+  .h-md-106px { height: 6.625rem; }
+  .h-md-136px { height: 8.5rem; }
+  .h-md-158px { height: 9.875rem; }
+  .h-md-208px { height: 13rem; }
+  .h-md-465px { height: 29.0625rem; }
+  .min-h-md-208px { min-height: 13rem; }
+
+  /* Border Radius Responsive */
+  .rounded-md-xl { border-radius: var(--radius-xl); }
+  .rounded-md-10px { border-radius: 0.625rem; }
+  .rounded-md-13px { border-radius: var(--radius-custom); }
+  .rounded-b-md-13px {
+    border-end-start-radius: var(--radius-custom);
+    border-end-end-radius: var(--radius-custom);
+  }
+
+  /* Carousel Styles for Medium+ */
+  .shadow-header {
+    box-shadow: 0 4px 4px 0px rgba(0,0,0,0.04);
+  }
+  
+  .slick-track {
+    padding-inline: 2rem;
+  }
+  
+  .slick-slide {
+    padding-left: .5rem !important;
+    padding-right: .5rem !important;
+  }
+
+  .slick-slider:hover .slick-next,
+  .slick-slider:hover .slick-prev {
+    opacity: 1;
+  }
+
+  .slick-next,
+  .slick-prev {
+    background: linear-gradient(to left, var(--color-white), transparent) !important;
+    width: 5.3125rem;
+    height: 100%;
+    transition: opacity 200ms ease-in-out;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    z-index: 99;
+    opacity: 0;
+  }
+  
+  .slick-next::before,
+  .slick-prev::before {
+    display: flex !important;
+    height: 3.125rem;
+    width: 3.125rem;
+    flex: 0 0 3.125rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-white);
+    font-size: 1.875rem !important;
+    color: var(--color-black);
+    opacity: 1;
+    font-family: "Material Design Icons";
+    content: "\F0142";
+    box-shadow: var(--shadow-carousel);
+  }
+
+  .slick-prev::before { content: "\F0141"; }
+  .slick-prev {
+    left: 0;
+    right: initial;
+    background: linear-gradient(to right, var(--color-white), transparent) !important;
+  }
+
+  .slick-disabled { opacity: 0 !important; }
+}
+
+@media (min-width: 64rem) {
+  .h-lg-475px { height: 29.6875rem; }
+}
+
+@media (min-width: 75rem) {
+  .h-xl-470px { height: 29.375rem; }
+}
+
+@media (min-width: 90rem) {
+  .h-2xl-450px { height: 28.125rem; }
+}
+
+@media (min-width: 1280px) {
+  .d-lg-block { display: block; }
+  .d-lg-none { display: none; }
+  .d-lg-flex { display: flex; }
+  .px-xl-72px {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}

@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>CashKaro - Cashback & Deals</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/cashkaro-favicon.png"> 
+
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" crossorigin="anonymous">
+
+  <!-- Custom Styles -->
+  <link href="./assets/css/style.css" rel="stylesheet">
+   <link href="./assets/css/responsive.css" rel="stylesheet">
+</head>
+
+
+<body>
+<div id="overlay" class="overlay" aria-hidden="true"></div>
+
+<!-- Side Menu -->
+<aside id="sideMenu" class="side-menu" aria-label="Main categories">
+  <div class="flex items-center justify-space-between px-4">
+    <h2 class="font-extrabold fs-18px my-6">Category</h2>
+    <button id="closeMenu" class="btn bg-white" aria-label="Close menu">
+      <span class="mdi mdi-close fs-24px" aria-hidden="true"></span>
+    </button>
+  </div>
+  
+  <ul class="category-menu">
+    <li>
+      <a class="font-semibold px-4 py-4 flex items-center text-decoration-none" 
+         href="#" title="View most popular retailers">
+        <span class="mdi fs-24px me-2 mdi-storefront-outline" aria-hidden="true"></span>
+        Most Popular Retailers
+      </a>
+    </li>
+    <li>
+      <a class="font-semibold px-4 py-4 flex items-center text-decoration-none" 
+         href="#" title="Browse retailers by category">
+        <span class="mdi fs-24px me-2 mdi-sticker-check-outline" aria-hidden="true"></span>
+        Retailers by Category
+      </a>
+    </li>
+    <li>
+      <a class="font-semibold px-4 py-4 flex items-center text-decoration-none" 
+         href="#" title="See top product deals">
+        <span class="mdi fs-24px me-2 mdi-bullhorn-outline" aria-hidden="true"></span>
+        Top Product Deals
+      </a>
+    </li>
+
+    <hr class="border border-grey-ligthen-4 my-2" aria-hidden="true">
+
+    <li>
+      <a class="font-semibold px-4 py-4 flex items-center text-decoration-none" 
+         href="#" title="Shop mobiles">
+        <span class="mdi fs-24px me-2 mdi-cellphone" aria-hidden="true"></span>
+        Mobiles
+      </a>
+    </li>
+    <li>
+      <a class="font-semibold px-4 py-4 flex items-center text-decoration-none" 
+         href="#" title="Shop headphones">
+        <span class="mdi fs-24px me-2 mdi-earbuds-outline" aria-hidden="true"></span>
+        Headphones
+      </a>
+    </li>
+    <li>
+      <a class="font-semibold px-4 py-4 flex items-center text-decoration-none" 
+         href="#" title="Shop laptops">
+        <span class="mdi fs-24px me-2 mdi-laptop" aria-hidden="true"></span>
+        Laptops
+      </a>
+    </li>
+
+    <hr class="border border-grey-ligthen-4 my-2" aria-hidden="true">
+
+    <li>
+      <a class="font-semibold px-4 py-4 flex items-center text-decoration-none" 
+         href="#" title="Shop beauty products">
+        <span class="mdi fs-24px me-2 mdi-face-woman-shimmer-outline" aria-hidden="true"></span>
+        Beauty
+      </a>
+    </li>
+    <li>
+      <a class="font-semibold px-4 py-4 flex items-center text-decoration-none" 
+         href="#" title="Shop grocery items">
+        <span class="mdi fs-24px me-2 mdi-fruit-grapes-outline" aria-hidden="true"></span>
+        Grocery
+      </a>
+    </li>
+    <li>
+      <a class="font-semibold px-4 py-4 flex items-center text-decoration-none" 
+         href="#" title="Shop diapers">
+        <span class="mdi fs-24px me-2 mdi-diaper-outline" aria-hidden="true"></span>
+        Diapers
+      </a>
+    </li>
+  </ul>
+</aside>
+
+  <header class="h-14 h-md-82px bg-white shadow-header sticky top-0 z-99999 flex items-center justify-space-between px-4 px-md-10 px-xl-72px">
+
+  <!-- Left Section -->
+  <section class="flex items-center flex-1">
+    <!-- Hamburger Menu -->
+    <div class="flex items-center">
+      <button type="button" class="btn bg-white items-center cursor-pointer fs-12px fs-md-16px font-semibold leading-20px me-4" id="hamburgerBtn" aria-label="Open category menu">
+        <img src="./assets/images/others/hamburger-menu.svg" alt="Open category menu" loading="lazy" width="24" height="24">
+      </button>
+
+      <!-- Logo -->
+      <a href="/" aria-label="CashKaro Homepage">
+        <img src="./assets/images/cashkaro.svg" alt="CashKaro logo" fetchpriority="high" width="106" height="24" class="w-86px h-auto w-md-101px block">
+      </a>
+    </div>
+
+    <!-- Search Section -->
+    <div class="flex-1 min-w-620px max-w-620px d-lg-block d-none px-md-10">
+      <form class="relative flex items-center w-full mx-auto px-2 px-md-0 searchbar" role="search" aria-label="Site search">
+        <div class="w-full">
+          <div class="relative flex w-full">
+            <label for="searchInput" class="sr-only">Search for brands or products</label>
+            <i class="mdi mdi-magnify text-grey-lighten-2 fs-md-24px me-4 absolute" style="top: 8px; left: 18px;" aria-hidden="true"></i>
+            <input
+              type="text"
+              id="searchInput"
+              autocomplete="off"
+              placeholder="Search for any brand or product"
+              class="form-control h-50px w-full bg-grey-lighten-3 rounded-12px"
+            >
+            
+            <!-- Search Panel -->
+            <div id="searchPanel" class="search-panel bg-white border-grey-ligthen-4 bg-grey-lighten-3 shadow" >
+              <div class="flex gap-2">
+                
+                <!-- Left Column -->
+                <div class="flex-1 bg-white">
+                  <p class="md:py-4 md:pl-6 md:pr-2 text-ck-text-black text-sm font-semibold hidden md:block bg-secondary-ligthen-1 p-3 text-no-wrap">Trending Deals:</p>
+                  <div class="border-b border-grey cursor-pointer text-ck-black fs-14px bg-white px-4 p-2 font-md-semibold">Amazon <span class="fs-12px text-ck-blue block">in Stores</span></div>
+                  <div class="border-b border-grey cursor-pointer text-ck-black fs-14px bg-white px-4 p-2 font-md-semibold">Flipkart <span class="fs-12px text-ck-blue block">in Stores</span></div>
+                  <div class="cursor-pointer text-ck-black fs-14px bg-white px-4 p-2 font-md-semibold">Ajio <span class="fs-12px text-ck-blue block">in Stores</span></div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="flex-1 py-2 mb-2 me-2">
+                  <div class="rounded p-3 mb-3 shadow-header bg-white h-106px flex items-center justify-center mt-3">
+                    <div class="text-center">
+                      <img src="./assets/images/others/amazon-1.png" alt="Amazon offers" class="h-12">
+                      <div class="fs-12px text-ck-blue font-md-semibold">1 Coupon • Up to 5% Rewards</div>
+                    </div>
+                  </div>
+                  <div class="flex gap-2">
+                    <div class="flex-1 rounded bg-white shadow-header">
+                      <div class="p-2 font-semibold fs-12px">Pick of the Week</div>
+                      <hr class="border border-grey-ligthen-4">
+                      <div class="p-2">
+                        <img src="./assets/images/others/vijaysales.png" alt="Vijay Sales offer" class="h-8">
+                        <div class="fs-12px line-clamp-2 text-grey">Reliance Digital up to ₹15,000 off…</div>
+                      </div>
+                    </div>
+                    <div class="flex-1 rounded bg-white shadow-header">
+                      <div class="p-2 font-semibold fs-12px">Pick of the Week</div>
+                      <hr class="border border-grey-ligthen-4">
+                      <div class="p-2">
+                        <img src="./assets/images/others/reliancedigital.png" alt="Reliance Digital offer" class="h-8">
+                        <div class="fs-12px line-clamp-2 text-grey">Reliance Digital up to ₹15,000 off…</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- End Search Panel -->
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Right Section -->
+  <section class="flex items-center">
+    <a class="d-lg-flex d-none items-center cursor-pointer text-decoration-none font-semibold px-md-5 px-4 fs-md-18px border-e border-dark text-black h-30px" href="/wallet" title="Wallet balance">
+      <span class="mdi mdi-wallet-bifold-outline me-2 fs-18px fs-md-24px leading-none" aria-hidden="true"></span>
+      ₹12,102.4
+    </a>
+    <a class="flex d-lg-none items-center cursor-pointer text-decoration-none me-2 h-30px" href="/help" title="Help">
+      <img src="./assets/images/others/chat_bubble.svg" alt="Chat help icon" loading="lazy" width="24" height="24">
+    </a>
+    <a class="flex d-lg-none items-center cursor-pointer text-decoration-none px-md-5 text-black fs-18px px-2 h-30px" href="/notifications" title="Notifications">
+      <span class="mdi mdi-bell-outline fs-24px" aria-hidden="true"></span>
+    </a>
+    <a class="d-lg-flex d-none items-center cursor-pointer text-decoration-none px-md-5 relative px-2 fs-md-18px font-semibold border-e border-dark text-black h-30px" href="/help">
+      Help
+    </a>
+    <a class="d-lg-flex d-none items-center cursor-pointer fs-12px fs-md-18px ps-5 font-semibold text-dark text-black h-30px text-decoration-none" href="/login">
+      <span class="mdi mdi-account-circle-outline me-2 fs-md-24px" aria-hidden="true"></span>
+      Login / Sign up
+    </a>
+  </section>
+
+</header>
+
+<!-- Banner Slider Section -->
+<section class="banner-slider relative py-md-8 my-md-0 my-4" aria-label="Promotional banners">
+  <a href="/offers" title="View current offers">
+    <img src="./assets/images/banner/banner-1.png" alt="Up to 50% cashback on popular stores" class="img-fluid w-full" loading="lazy" width="1200" height="400">
+  </a>
+  <a href="/electronics" title="Shop electronics deals">
+    <img src="./assets/images/banner/banner-2.png" alt="Electronics sale – up to ₹15,000 off" class="img-fluid w-full" loading="lazy" width="1200" height="400">
+  </a>
+  <a href="/fashion" title="Explore latest fashion discounts">
+    <img src="./assets/images/banner/banner-3.png" alt="Flat 40% off on top fashion brands" class="img-fluid w-full" loading="lazy" width="1200" height="400">
+  </a>
+  <a href="/mobiles" title="Check mobile phone offers">
+    <img src="./assets/images/banner/banner-4.png" alt="Exclusive mobile deals starting at ₹4,999" class="img-fluid w-full" loading="lazy" width="1200" height="400">
+  </a>
+  <a href="/grocery" title="Shop grocery and daily needs">
+    <img src="./assets/images/banner/banner-5.png" alt="Save more on grocery essentials" class="img-fluid w-full" loading="lazy" width="1200" height="400">
+  </a>
+</section>
+
+<section class="categories-section py-md-8 my-md-0 my-4">
+  <h2 class="fs-md-24px font-bold px-md-10 mb-3 fs-16px px-2">Top Categories</h2>
+  <div class="category-slider">
+    <a href="#" class="block text-decoration-none text-center p-3">
+      <div class="h-73px w-73px w-md-136px h-md-136px rounded-pill hover-shadow mx-auto">
+        <img src="./assets/images/categories/category-1.png" alt="New on CashKaro" class="img-fluid">
+      </div>
+      <div class="text-grey mt-3 fs-md-18px fs-12px font-semibold line-clamp-2">New on CashKaro</div>
+    </a>
+    <a href="#" class="block text-decoration-none text-center p-3">
+      <div class="h-73px w-73px w-md-136px h-md-136px rounded-pill hover-shadow mx-auto">
+        <img src="./assets/images/categories/category-2.png" alt="Fashion" class="img-fluid">
+      </div>
+      <div class="text-grey mt-3 fs-md-18px fs-12px font-semibold line-clamp-2">Fashion</div>
+    </a>
+    <a href="#" class="block text-decoration-none text-center p-3">
+      <div class="h-73px w-73px w-md-136px h-md-136px rounded-pill hover-shadow mx-auto">
+        <img src="./assets/images/categories/category-3.png" alt="Food & Grocery" class="img-fluid">
+      </div>
+      <div class="text-grey mt-3 fs-md-18px fs-12px font-semibold line-clamp-2">Food & Grocery</div>
+    </a>
+    <a href="#" class="block text-decoration-none text-center p-3">
+      <div class="h-73px w-73px w-md-136px h-md-136px rounded-pill hover-shadow mx-auto">
+        <img src="./assets/images/categories/category-4.png" alt="Mobile" class="img-fluid">
+      </div>
+      <div class="text-grey mt-3 fs-md-18px fs-12px font-semibold line-clamp-2">Mobile</div>
+    </a>
+    <a href="#" class="block text-decoration-none text-center p-3">
+      <div class="h-73px w-73px w-md-136px h-md-136px rounded-pill hover-shadow mx-auto">
+        <img src="./assets/images/categories/category-5.png" alt="Banking" class="img-fluid">
+      </div>
+      <div class="text-grey mt-3 fs-md-18px fs-12px font-semibold line-clamp-2">Banking</div>
+    </a>
+    <a href="#" class="block text-decoration-none text-center p-3">
+      <div class="h-73px w-73px w-md-136px h-md-136px rounded-pill hover-shadow mx-auto">
+        <img src="./assets/images/categories/category-6.png" alt="Electronics" class="img-fluid">
+      </div>
+      <div class="text-grey mt-3 fs-md-18px fs-12px font-semibold line-clamp-2">Electronics</div>
+    </a>
+    <a href="#" class="block text-decoration-none text-center p-3">
+      <div class="h-73px w-73px w-md-136px h-md-136px rounded-pill hover-shadow mx-auto">
+        <img src="./assets/images/categories/category-7.png" alt="Beauty & Grooming" class="img-fluid">
+      </div>
+      <div class="text-grey mt-3 fs-md-18px fs-12px font-semibold line-clamp-2">Beauty & Grooming</div>
+    </a>
+    <a href="#" class="block text-decoration-none text-center p-3">
+      <div class="h-73px w-73px w-md-136px h-md-136px rounded-pill hover-shadow mx-auto">
+        <img src="./assets/images/categories/category-8.png" alt="Pharmacy" class="img-fluid">
+      </div>
+      <div class="text-grey mt-3 fs-md-18px fs-12px font-semibold line-clamp-2">Pharmacy</div>
+    </a>
+    <a href="#" class="block text-decoration-none text-center p-3">
+      <div class="h-73px w-73px w-md-136px h-md-136px rounded-pill hover-shadow mx-auto">
+        <img src="./assets/images/categories/category-9.png" alt="Hotel & Flights" class="img-fluid">
+      </div>
+      <div class="text-grey mt-3 fs-md-18px fs-12px font-semibold line-clamp-2">Hotel & Flights</div>
+    </a>
+    <a href="#" class="block text-decoration-none text-center p-3">
+      <div class="h-73px w-73px w-md-136px h-md-136px rounded-pill hover-shadow mx-auto">
+        <img src="./assets/images/categories/category-10.png" alt="Health & Wellness" class="img-fluid">
+      </div>
+      <div class="text-grey mt-3 fs-md-18px fs-12px font-semibold line-clamp-2">Health & Wellness</div>
+    </a>
+  </div>
+</section>
+
+  <!-- Exclusive Offers Section -->
+<section class="offers-section py-md-8 my-md-0 my-4">
+    <div class="flex items-center justify-space-between mb-3  px-2">
+        <h2 class="fs-md-24px font-bold fs-16px px-md-10">Exclusive Offers for You</h2>
+        <a href="#" class="text-decoration-none fs-12px fs-md-16px font-semibold inline-flex items-center" title="View all exclusive offers">
+            View All <span class="mdi mdi-arrow-right-thin fs-18px"></span>
+        </a>
+    </div>
+
+    <div class="rewards-slider">
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+                    <div class="h-18px w-auto max-w-md-90 h-md-31px bg-gradient-offer rounded-b-13px flex justify-center items-center px-4">
+                        <p class="text-white fs-10px fs-md-16px line-clamp-1 font-semibold text-center">Increased Cashback</p>
+                    </div>
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/amazon.png" alt="Amazon logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <a href="#" class="flex items-center cursor-pointer fs-10px fs-md-16px font-semibold leading-20px" title="Read the rewards rates and terms for this offer">
+                        Rewards rates & terms
+                    </a>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Flat <br> 5% Rewards</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey-darken-1 rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/myntra.jpg" alt="Myntra logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <div class="inline-flex bg-white text-danger h-30px px-2 font-semibold fs-md-15px fs-12px rounded items-center justify-center border-grey-ligthen-4 ">
+                        <span class="mdi mdi-clock-outline me-2 fs-18px"></span>
+                        Ends in 05: 59: 59
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey-darken-1 border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Flat<br> 5% Rewards</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey-darken-1 rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+                    <div class="h-18px w-auto max-w-md-90 h-md-31px bg-gradient-offer rounded-b-13px flex justify-center items-center px-4">
+                        <p class="text-white fs-10px fs-md-16px line-clamp-1 font-semibold text-center">Limited Period Offer</p>
+                    </div>
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/the-man-company.png" alt="The Man Company logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <a href="#" class="flex items-center cursor-pointer fs-12px fs-md-16px font-semibold leading-20px" title="Read the cashback rates and terms for this offer">
+                        Cashback Rates & Terms
+                    </a>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey-darken-1 border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br>7% Cashback</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey-darken-1 rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/flipkart.png" alt="Flipkart logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <div class="inline-flex bg-white text-danger h-30px px-2 font-semibold fs-md-15px fs-12px rounded items-center justify-center border-grey-ligthen-4 ">
+                        <span class="mdi mdi-clock-outline me-2 fs-18px"></span>
+                        Ends in 05: 59: 59
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey-darken-1 border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br> 7% Cashback</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey-darken-1 rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/flipkart.png" alt="Flipkart logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <div class="inline-flex bg-white text-danger h-30px px-2 font-semibold fs-md-15px fs-12px rounded items-center justify-center border-grey-ligthen-4 ">
+                        <span class="mdi mdi-clock-outline me-2 fs-18px"></span>
+                        Ends in 05: 59: 59
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey-darken-1 border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br> 7% Cashback</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey-darken-1 rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/sbi-logo.png" alt="SBI logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <a href="#" class="flex items-center cursor-pointer fs-12px fs-md-16px font-semibold leading-20px" title="Read the cashback rates and terms for this offer">
+                        Cashback Rates & Terms
+                    </a>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey-darken-1 border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br>7% Cashback</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/myntra.jpg" alt="Myntra logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <div class="inline-flex bg-white text-danger h-30px px-2 font-semibold fs-md-15px fs-12px rounded items-center justify-center border-grey-ligthen-4 ">
+                        <span class="mdi mdi-clock-outline me-2 fs-18px"></span>
+                        Ends in 05: 59: 59
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br>7% Cashback</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+                    <div class="h-18px w-auto max-w-md-90 h-md-31px bg-gradient-offer rounded-b-13px flex justify-center items-center px-4">
+                        <p class="text-white fs-10px fs-md-16px line-clamp-1 font-semibold text-center">Live now</p>
+                    </div>
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/the-man-company.png" alt="The Man Company logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <div class="inline-flex bg-white text-danger h-30px px-2 font-semibold fs-md-15px fs-12px rounded items-center justify-center border-grey-ligthen-4 ">
+                        <span class="mdi mdi-clock-outline me-2 fs-18px"></span>
+                        Ends in 05: 59: 59
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br>7% Cashback</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/sbi-logo.png" alt="SBI logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <a href="#" class="flex items-center cursor-pointer fs-12px fs-md-16px font-semibold leading-20px" title="Read the cashback rates and terms for this offer">
+                        Cashback Rates & Terms
+                    </a>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br>₹1,800 Rewards</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/magzter.png" alt="Magzter logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <a href="#" class="flex items-center cursor-pointer fs-12px fs-md-16px font-semibold leading-20px" title="Read the cashback rates and terms for this offer">
+                        Cashback Rates & Terms
+                    </a>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br>7% Cashback</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+                    <div class="h-18px w-auto max-w-md-90 h-md-31px bg-gradient-offer rounded-b-13px flex justify-center items-center px-4">
+                        <p class="text-white fs-10px fs-md-16px line-clamp-1 font-semibold text-center">Live now</p>
+                    </div>
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/magzter.png" alt="Magzter logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <a href="#" class="flex items-center cursor-pointer fs-12px fs-md-16px font-semibold leading-20px" title="Read the cashback rates and terms for this offer">
+                        Cashback Rates & Terms
+                    </a>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br>7% Cashback</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/amazon.png" alt="Amazon logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <a href="#" class="flex items-center cursor-pointer fs-12px fs-md-16px font-semibold leading-20px" title="Read the cashback rates and terms for this offer">
+                        Cashback Rates & Terms
+                    </a>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br>₹1,800 Rewards</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+                    <div class="h-18px w-auto max-w-md-90 h-md-31px bg-gradient-offer rounded-b-13px flex justify-center items-center px-4">
+                        <p class="text-white fs-10px fs-md-16px line-clamp-1 font-semibold text-center">50-90% Off</p>
+                    </div>
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/myntra.jpg" alt="Myntra logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <a href="#" class="flex items-center cursor-pointer fs-12px fs-md-16px font-semibold leading-20px" title="Read the cashback rates and terms for this offer">
+                        Cashback Rates & Terms
+                    </a>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br>7% Cashback</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class=" mb-3">
+            <div class="h-95px h-md-158px border border-grey rounded-t-13px rounded-b-13px border-b-0 relative">
+                <div class="flex h-8 justify-center mb-md-3">
+                    <div class="h-18px w-auto max-w-md-90 h-md-31px bg-gradient-offer rounded-b-13px flex justify-center items-center px-4">
+                        <p class="text-white fs-10px fs-md-16px line-clamp-1 font-semibold text-center">Live now</p>
+                    </div>
+                </div>
+
+                <div class="mt-1 pb-md-5 mt-md-3 text-center h-52px flex justify-center h-md-88px">
+                    <img loading="lazy" width="160" height="80" class="mx-auto h-42px h-md-65px object-contain" src="./assets/images/others/the-man-company.png" alt="The Man Company logo">
+                </div>
+
+                <div class="w-90 h-5 h-md-32px mx-auto flex justify-center items-center">
+                    <a href="#" class="flex items-center cursor-pointer fs-12px fs-md-16px font-semibold leading-20px" title="Read the cashback rates and terms for this offer">
+                        Cashback Rates & Terms
+                    </a>
+                </div>
+            </div>
+
+            <div class="h-68px h-md-106px border border-grey border-t-0 rounded-b-13px rounded-t-13px flex justify-center items-center">
+                <div class="w-85 mx-auto text-center">
+                    <button type="button" class="btn fs-12px fs-md-18px font-semibold rounded rounded-md-xl bg-secondary text-white w-122px h-36px w-md-208px h-md-64px px-3 px-md-5 w-md-full">
+                        <span class="line-clamp-2">Upto <br>7% Cashback</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Mobile Phones Section -->
+<section class="mobile-section py-md-8 my-md-0 my-4 ">
+    <div class="flex items-center justify-space-between mb-3  px-2">
+        <h2 class="fs-md-24px font-bold fs-16px px-md-10">Amazon - Top Selling Offers</h2>
+        <a href="#" class="text-decoration-none fs-12px fs-md-16px font-semibold inline-flex items-center" title="View all top selling offers">
+            View All <span class="mdi mdi-arrow-right-thin fs-18px"></span>
+        </a>
+    </div>
+
+    <div class="mobile-slider">
+      <div>
+            <div class="relative h-385px h-md-465px h-lg-475px h-xl-470px h-2xl-450px rounded-lg rounded-md-10px border-2 border-gray-darken-2 overflow-hidden cursor-pointer">
+                <a href="#" title="View details for OnePlus 13 Smarter AI">
+                    <div class="w-full h-166px min-h-166px h-md-208px min-h-md-208px overflow-hidden border-b border-gray-darken-2">
+                        <img alt="OnePlus 13 Smarter AI" loading="lazy" width="275" height="208" class="w-full h-full aspect-auto object-contain" src="./assets/images/others/oneplus-3.jpg">
+                    </div>
+                </a>
+                <div class="p-4">
+                    <div class="fs-10px leading-10px fs-md-14px text-ck-text-black font-bold font-md-semibold mb-2">One Plus</div>
+                    <h3 class="flex items-center cursor-pointer mb-2 fs-12px fs-md-16px text-ck-text-black leading-md-18px min-h-32px font-medium line-clamp-2 h-9">
+                        <a href="#" title="OnePlus 13 Smarter AI" class="text-decoration-none text-ck-text-black">OnePlus 13 Smarter AI</a>
+                    </h3>
+                    <div class="flex items-center flex-wrap pb-3 fs-14px fs-md-16px leading-md-18px text-ck-text-inactive font-bold font-metropolis">
+                        ₹62,999
+                        <del class="font-bold fs-12px fs-md-16px leading-md-11px px-1">₹72,999</del>
+                        <span class="text-ck-blue fs-10px pl-1 fs-md-16px leading-md-11px font-bold whitespace-nowrap">(14% off)</span>
+                    </div>
+                    <hr class="border border-gray-darken-2 border-dashed">
+                    <div class="p-1-5 p-md-2 mt-3 mb-3 bg-secondary-ligthen-1 rounded border border-gray-darken-2 inline-block text-ck-text-black fs-10px fs-md-16px leading-10px leading-md-5 font-semibold">
+                        After Rewards of <span class="font-md-extrabold font-metropolis">₹2,240</span>
+                    </div>
+                    <p class="fs-14px fs-md-16px text-ck-text-inactive leading-20px font-bold ">
+                        Best price<br>
+                        <span class="font-bold text-ck-text-black fs-2xl leading-none leading-md-6 font-metropolis">₹61,759</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="relative h-385px h-md-465px h-lg-475px h-xl-470px h-2xl-450px rounded-lg rounded-md-10px border-2 border-gray-darken-2 overflow-hidden">
+                <a href="#" title="View details for Samsung Galaxy S24 5G">
+                    <div class="w-full h-166px min-h-166px h-md-208px min-h-md-208px overflow-hidden border-b border-gray-darken-2">
+                        <img alt="Samsung Galaxy S24 5G" loading="lazy" width="275" height="208" class="w-full h-full aspect-auto object-contain" src="./assets/images/others/s-24.jpg">
+                    </div>
+                </a>
+                <div class="p-4">
+                    <div class="fs-10px leading-10px fs-md-14px text-ck-text-black font-bold font-md-semibold mb-2">Samsung</div>
+                    <h3 class="flex items-center cursor-pointer mb-2 fs-12px fs-md-16px text-ck-text-black leading-md-18px min-h-32px font-medium line-clamp-2 h-9">
+                        <a href="#" title="Samsung Galaxy S24 5G" class="text-decoration-none text-ck-text-black">Samsung Galaxy S24 5G</a>
+                    </h3>
+                    <div class="flex items-center flex-wrap pb-3 fs-14px fs-md-16px leading-md-18px text-ck-text-inactive font-bold font-metropolis">
+                        ₹74,999
+                        <del class="font-bold fs-12px fs-md-16px leading-md-11px px-1">₹42,765</del>
+                        <span class="text-ck-blue fs-10px pl-1 fs-md-16px leading-md-11px font-bold whitespace-nowrap">(43% off)</span>
+                    </div>
+                    <hr class="border border-gray-darken-2 border-dashed">
+                    <div class="p-1-5 p-md-2 mt-3 mb-3 bg-secondary-ligthen-1 rounded border border-gray-darken-2 inline-block text-ck-text-black fs-10px fs-md-16px leading-10px leading-md-5 font-semibold">
+                        After Rewards of <span class="font-md-extrabold font-metropolis">₹2,240</span>
+                    </div>
+                    <p class="fs-14px fs-md-16px text-ck-text-inactive leading-20px font-bold ">
+                        Best price<br>
+                        <span class="font-bold text-ck-text-black fs-2xl leading-none leading-md-6 font-metropolis">₹61,759</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="relative h-385px h-md-465px h-lg-475px h-xl-470px h-2xl-450px rounded-lg rounded-md-10px border-2 border-gray-darken-2 overflow-hidden">
+                <a href="#" title="View details for OnePlus Nord CE 3 Lite 5G">
+                    <div class="w-full h-166px min-h-166px h-md-208px min-h-md-208px overflow-hidden border-b border-gray-darken-2">
+                        <img alt="OnePlus Nord CE 3 Lite 5G" loading="lazy" width="275" height="208" class="w-full h-full aspect-auto object-contain" src="./assets/images/products/oneplus-1.png">
+                    </div>
+                </a>
+                <div class="p-4">
+                    <div class="fs-10px leading-10px fs-md-14px text-ck-text-black font-bold font-md-semibold mb-2">One Plus</div>
+                    <h3 class="flex items-center cursor-pointer mb-2 fs-12px fs-md-16px text-ck-text-black leading-md-18px min-h-32px font-medium line-clamp-2 h-9">
+                        <a href="#" title="OnePlus Nord CE 3 Lite 5G" class="text-decoration-none text-ck-text-black">OnePlus Nord CE 3 Lite 5G</a>
+                    </h3>
+                    <div class="flex items-center flex-wrap pb-3 fs-14px fs-md-16px leading-md-18px text-ck-text-inactive font-bold font-metropolis">
+                        ₹63,999
+                        <del class="font-bold fs-12px fs-md-16px leading-md-11px px-1">₹74,999</del>
+                        <span class="text-ck-blue fs-10px pl-1 fs-md-16px leading-md-11px font-bold whitespace-nowrap">(15% off)</span>
+                    </div>
+                    <hr class="border border-gray-darken-2 border-dashed">
+                    <div class="p-1-5 p-md-2 mt-3 mb-3 bg-secondary-ligthen-1 rounded border border-gray-darken-2 inline-block text-ck-text-black fs-10px fs-md-16px leading-10px leading-md-5 font-semibold">
+                        After Rewards of <span class="font-md-extrabold font-metropolis">₹2,240</span>
+                    </div>
+                    <p class="fs-14px fs-md-16px text-ck-text-inactive leading-20px font-bold ">
+                        Best price<br>
+                        <span class="font-bold text-ck-text-black fs-2xl leading-none leading-md-6 font-metropolis">₹61,759</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="relative h-385px h-md-465px h-lg-475px h-xl-470px h-2xl-450px rounded-lg rounded-md-10px border-2 border-gray-darken-2 overflow-hidden">
+                <a href="#" title="View details for OnePlus Nord CE 3 Lite 5G">
+                    <div class="w-full h-166px min-h-166px h-md-208px min-h-md-208px overflow-hidden border-b border-gray-darken-2">
+                        <img alt="OnePlus Nord CE 3 Lite 5G" loading="lazy" width="275" height="208" class="w-full h-full aspect-auto object-contain" src="./assets/images/products/oneplus-2.png">
+                    </div>
+                </a>
+                <div class="p-4">
+                    <div class="fs-10px leading-10px fs-md-14px text-ck-text-black font-bold font-md-semibold mb-2">One Plus</div>
+                    <h3 class="flex items-center cursor-pointer mb-2 fs-12px fs-md-16px text-ck-text-black leading-md-18px min-h-32px font-medium line-clamp-2 h-9">
+                        <a href="#" title="OnePlus Nord CE 3 Lite 5G" class="text-decoration-none text-ck-text-black">OnePlus Nord CE 3 Lite 5G</a>
+                    </h3>
+                    <div class="flex items-center flex-wrap pb-3 fs-14px fs-md-16px leading-md-18px text-ck-text-inactive font-bold font-metropolis">
+                        ₹63,999
+                        <del class="font-bold fs-12px fs-md-16px leading-md-11px px-1">₹74,999</del>
+                        <span class="text-ck-blue fs-10px pl-1 fs-md-16px leading-md-11px font-bold whitespace-nowrap">(15% off)</span>
+                    </div>
+                    <hr class="border border-gray-darken-2 border-dashed">
+                    <div class="p-1-5 p-md-2 mt-3 mb-3 bg-secondary-ligthen-1 rounded border border-gray-darken-2 inline-block text-ck-text-black fs-10px fs-md-16px leading-10px leading-md-5 font-semibold">
+                        After Rewards of <span class="font-md-extrabold font-metropolis">₹2,240</span>
+                    </div>
+                    <p class="fs-14px fs-md-16px text-ck-text-inactive leading-20px font-bold ">
+                        Best price<br>
+                        <span class="font-bold text-ck-text-black fs-2xl leading-none leading-md-6 font-metropolis">₹61,759</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="relative h-385px h-md-465px h-lg-475px h-xl-470px h-2xl-450px rounded-lg rounded-md-10px border-2 border-gray-darken-2 overflow-hidden">
+                <a href="#" title="View details for OnePlus Nord CE 3 Lite 5G">
+                    <div class="w-full h-166px min-h-166px h-md-208px min-h-md-208px overflow-hidden border-b border-gray-darken-2">
+                        <img alt="OnePlus Nord CE 3 Lite 5G" loading="lazy" width="275" height="208" class="w-full h-full aspect-auto object-contain" src="./assets/images/products/oneplus-1.png">
+                    </div>
+                </a>
+                <div class="p-4">
+                    <div class="fs-10px leading-10px fs-md-14px text-ck-text-black font-bold font-md-semibold mb-2">One Plus</div>
+                    <h3 class="flex items-center cursor-pointer mb-2 fs-12px fs-md-16px text-ck-text-black leading-md-18px min-h-32px font-medium line-clamp-2 h-9">
+                        <a href="#" title="OnePlus Nord CE 3 Lite 5G" class="text-decoration-none text-ck-text-black">OnePlus Nord CE 3 Lite 5G</a>
+                    </h3>
+                    <div class="flex items-center flex-wrap pb-3 fs-14px fs-md-16px leading-md-18px text-ck-text-inactive font-bold font-metropolis">
+                        ₹63,999
+                        <del class="font-bold fs-12px fs-md-16px leading-md-11px px-1">₹74,999</del>
+                        <span class="text-ck-blue fs-10px pl-1 fs-md-16px leading-md-11px font-bold whitespace-nowrap">(15% off)</span>
+                    </div>
+                    <hr class="border border-gray-darken-2 border-dashed">
+                    <div class="p-1-5 p-md-2 mt-3 mb-3 bg-secondary-ligthen-1 rounded border border-gray-darken-2 inline-block text-ck-text-black fs-10px fs-md-16px leading-10px leading-md-5 font-semibold">
+                        After Rewards of <span class="font-md-extrabold font-metropolis">₹2,240</span>
+                    </div>
+                    <p class="fs-14px fs-md-16px text-ck-text-inactive leading-20px font-bold ">
+                        Best price<br>
+                        <span class="font-bold text-ck-text-black fs-2xl leading-none leading-md-6 font-metropolis">₹61,759</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="relative h-385px h-md-465px h-lg-475px h-xl-470px h-2xl-450px rounded-lg rounded-md-10px border-2 border-gray-darken-2 overflow-hidden">
+                <a href="#" title="View details for OnePlus Nord CE 3 Lite 5G">
+                    <div class="w-full h-166px min-h-166px h-md-208px min-h-md-208px overflow-hidden border-b border-gray-darken-2">
+                        <img alt="OnePlus Nord CE 3 Lite 5G" loading="lazy" width="275" height="208" class="w-full h-full aspect-auto object-contain" src="./assets/images/products/oneplus-2.png">
+                    </div>
+                </a>
+                <div class="p-4">
+                    <div class="fs-10px leading-10px fs-md-14px text-ck-text-black font-bold font-md-semibold mb-2">One Plus</div>
+                    <h3 class="flex items-center cursor-pointer mb-2 fs-12px fs-md-16px text-ck-text-black leading-md-18px min-h-32px font-medium line-clamp-2 h-9">
+                        <a href="#" title="OnePlus Nord CE 3 Lite 5G" class="text-decoration-none text-ck-text-black">OnePlus Nord CE 3 Lite 5G</a>
+                    </h3>
+                    <div class="flex items-center flex-wrap pb-3 fs-14px fs-md-16px leading-md-18px text-ck-text-inactive font-bold font-metropolis">
+                        ₹63,999
+                        <del class="font-bold fs-12px fs-md-16px leading-md-11px px-1">₹74,999</del>
+                        <span class="text-ck-blue fs-10px pl-1 fs-md-16px leading-md-11px font-bold whitespace-nowrap">(15% off)</span>
+                    </div>
+                    <hr class="border border-gray-darken-2 border-dashed">
+                    <div class="p-1-5 p-md-2 mt-3 mb-3 bg-secondary-ligthen-1 rounded border border-gray-darken-2 inline-block text-ck-text-black fs-10px fs-md-16px leading-10px leading-md-5 font-semibold">
+                        After Rewards of <span class="font-md-extrabold font-metropolis">₹2,240</span>
+                    </div>
+                    <p class="fs-14px fs-md-16px text-ck-text-inactive leading-20px font-bold ">
+                        Best price<br>
+                        <span class="font-bold text-ck-text-black fs-2xl leading-none leading-md-6 font-metropolis">₹61,759</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+            <div>
+            <div class="relative h-385px h-md-465px h-lg-475px h-xl-470px h-2xl-450px rounded-lg rounded-md-10px border-2 border-gray-darken-2 overflow-hidden cursor-pointer">
+                <a href="#" title="View details for OnePlus 13 Smarter AI">
+                    <div class="w-full h-166px min-h-166px h-md-208px min-h-md-208px overflow-hidden border-b border-gray-darken-2">
+                        <img alt="OnePlus 13 Smarter AI" loading="lazy" width="275" height="208" class="w-full h-full aspect-auto object-contain" src="./assets/images/others/oneplus-3.jpg">
+                    </div>
+                </a>
+                <div class="p-4">
+                    <div class="fs-10px leading-10px fs-md-14px text-ck-text-black font-bold font-md-semibold mb-2">One Plus</div>
+                    <h3 class="flex items-center cursor-pointer mb-2 fs-12px fs-md-16px text-ck-text-black leading-md-18px min-h-32px font-medium line-clamp-2 h-9">
+                        <a href="#" title="OnePlus 13 Smarter AI" class="text-decoration-none text-ck-text-black">OnePlus 13 Smarter AI</a>
+                    </h3>
+                    <div class="flex items-center flex-wrap pb-3 fs-14px fs-md-16px leading-md-18px text-ck-text-inactive font-bold font-metropolis">
+                        ₹62,999
+                        <del class="font-bold fs-12px fs-md-16px leading-md-11px px-1">₹72,999</del>
+                        <span class="text-ck-blue fs-10px pl-1 fs-md-16px leading-md-11px font-bold whitespace-nowrap">(14% off)</span>
+                    </div>
+                    <hr class="border border-gray-darken-2 border-dashed">
+                    <div class="p-1-5 p-md-2 mt-3 mb-3 bg-secondary-ligthen-1 rounded border border-gray-darken-2 inline-block text-ck-text-black fs-10px fs-md-16px leading-10px leading-md-5 font-semibold">
+                        After Rewards of <span class="font-md-extrabold font-metropolis">₹2,240</span>
+                    </div>
+                    <p class="fs-14px fs-md-16px text-ck-text-inactive leading-20px font-bold ">
+                        Best price<br>
+                        <span class="font-bold text-ck-text-black fs-2xl leading-none leading-md-6 font-metropolis">₹61,759</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="relative h-385px h-md-465px h-lg-475px h-xl-470px h-2xl-450px rounded-lg rounded-md-10px border-2 border-gray-darken-2 overflow-hidden">
+                <a href="#" title="View details for Samsung Galaxy S24 5G">
+                    <div class="w-full h-166px min-h-166px h-md-208px min-h-md-208px overflow-hidden border-b border-gray-darken-2">
+                        <img alt="Samsung Galaxy S24 5G" loading="lazy" width="275" height="208" class="w-full h-full aspect-auto object-contain" src="./assets/images/others/s-24.jpg">
+                    </div>
+                </a>
+                <div class="p-4">
+                    <div class="fs-10px leading-10px fs-md-14px text-ck-text-black font-bold font-md-semibold mb-2">Samsung</div>
+                    <h3 class="flex items-center cursor-pointer mb-2 fs-12px fs-md-16px text-ck-text-black leading-md-18px min-h-32px font-medium line-clamp-2 h-9">
+                        <a href="#" title="Samsung Galaxy S24 5G" class="text-decoration-none text-ck-text-black">Samsung Galaxy S24 5G</a>
+                    </h3>
+                    <div class="flex items-center flex-wrap pb-3 fs-14px fs-md-16px leading-md-18px text-ck-text-inactive font-bold font-metropolis">
+                        ₹74,999
+                        <del class="font-bold fs-12px fs-md-16px leading-md-11px px-1">₹42,765</del>
+                        <span class="text-ck-blue fs-10px pl-1 fs-md-16px leading-md-11px font-bold whitespace-nowrap">(43% off)</span>
+                    </div>
+                    <hr class="border border-gray-darken-2 border-dashed">
+                    <div class="p-1-5 p-md-2 mt-3 mb-3 bg-secondary-ligthen-1 rounded border border-gray-darken-2 inline-block text-ck-text-black fs-10px fs-md-16px leading-10px leading-md-5 font-semibold">
+                        After Rewards of <span class="font-md-extrabold font-metropolis">₹2,240</span>
+                    </div>
+                    <p class="fs-14px fs-md-16px text-ck-text-inactive leading-20px font-bold ">
+                        Best price<br>
+                        <span class="font-bold text-ck-text-black fs-2xl leading-none leading-md-6 font-metropolis">₹61,759</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="relative h-385px h-md-465px h-lg-475px h-xl-470px h-2xl-450px rounded-lg rounded-md-10px border-2 border-gray-darken-2 overflow-hidden">
+                <a href="#" title="View details for OnePlus Nord CE 3 Lite 5G">
+                    <div class="w-full h-166px min-h-166px h-md-208px min-h-md-208px overflow-hidden border-b border-gray-darken-2">
+                        <img alt="OnePlus Nord CE 3 Lite 5G" loading="lazy" width="275" height="208" class="w-full h-full aspect-auto object-contain" src="./assets/images/products/oneplus-1.png">
+                    </div>
+                </a>
+                <div class="p-4">
+                    <div class="fs-10px leading-10px fs-md-14px text-ck-text-black font-bold font-md-semibold mb-2">One Plus</div>
+                    <h3 class="flex items-center cursor-pointer mb-2 fs-12px fs-md-16px text-ck-text-black leading-md-18px min-h-32px font-medium line-clamp-2 h-9">
+                        <a href="#" title="OnePlus Nord CE 3 Lite 5G" class="text-decoration-none text-ck-text-black">OnePlus Nord CE 3 Lite 5G</a>
+                    </h3>
+                    <div class="flex items-center flex-wrap pb-3 fs-14px fs-md-16px leading-md-18px text-ck-text-inactive font-bold font-metropolis">
+                        ₹63,999
+                        <del class="font-bold fs-12px fs-md-16px leading-md-11px px-1">₹74,999</del>
+                        <span class="text-ck-blue fs-10px pl-1 fs-md-16px leading-md-11px font-bold whitespace-nowrap">(15% off)</span>
+                    </div>
+                    <hr class="border border-gray-darken-2 border-dashed">
+                    <div class="p-1-5 p-md-2 mt-3 mb-3 bg-secondary-ligthen-1 rounded border border-gray-darken-2 inline-block text-ck-text-black fs-10px fs-md-16px leading-10px leading-md-5 font-semibold">
+                        After Rewards of <span class="font-md-extrabold font-metropolis">₹2,240</span>
+                    </div>
+                    <p class="fs-14px fs-md-16px text-ck-text-inactive leading-20px font-bold ">
+                        Best price<br>
+                        <span class="font-bold text-ck-text-black fs-2xl leading-none leading-md-6 font-metropolis">₹61,759</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Credit Card Section -->
+<section class="card-section py-md-8 my-md-0 my-4">
+    <div class="flex items-center justify-space-between mb-3   px-2 ">
+        <h2 class="fs-md-24px font-bold fs-16px  px-md-10">Best of BankKaro</h2>
+        <a href="#" class="text-decoration-none fs-12px fs-md-16px font-semibold inline-flex items-center" title="View all credit card offers">
+            View All <span class="mdi mdi-arrow-right-thin fs-18px"></span>
+        </a>
+    </div>
+
+    <div class="card-slider">
+        <div class="relative">
+            <div class="flex items-center justify-center overflow-hidden rounded-xl w-full h-full cursor-pointer">
+                <div class="w-full h-full">
+                    <img alt="Offer: Flat ₹1500 CashKaro Rewards on Axis Flipkart Card Activation" loading="lazy" width="302" height="224" class="w-full h-full object-contain rounded-xl" src="./assets/images/others/axis-card.png">
+                </div>
+
+                <div class="absolute inset-0 z-10 w-full">
+                    <div class="absolute top-3 left-3 rounded-lg rounded-md-xl bg-white overflow-hidden">
+                        <img alt="Axis Bank logo" loading="lazy" width="112" height="56" class="border border-gray-darken-2 p-1 w-18 h-12 w-md-21 h-md-15 rounded-lg rounded-md-xl object-contain" src="./assets/images/others/axis-bank.png">
+                    </div>
+
+                    <div class="flex justify-space-between bottom-3 left-3 right-3 absolute items-center">
+                        <div class="inline-flex bg-white text-danger h-30px px-2 font-semibold fs-md-15px fs-12px rounded items-center justify-center">
+                            <span class="mdi mdi-clock-outline me-2 fs-18px"></span>
+                            Deals ends in 23: 59: 59
+                        </div>
+
+                        <button type="button" class="btn px-4 rounded bg-white rounded-lg text-ck-blue font-semibold fs-12px fs-md-18px h-md-40px h-28px px-4 py-1-5" aria-label="Apply for Axis Flipkart Credit Card">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative">
+            <div class="flex items-center justify-center overflow-hidden rounded-xl w-full h-full cursor-pointer">
+                <div class="w-full h-full">
+                    <img alt="Offer: Exclusive rewards on HSBC credit cards" loading="lazy" width="302" height="224" class="w-full h-full object-contain rounded-xl" src="./assets/images/others/hsbc-card.png">
+                </div>
+
+                <div class="absolute inset-0 z-10 w-full">
+                    <div class="absolute top-3 left-3 rounded-lg rounded-md-xl bg-white overflow-hidden">
+                        <img alt="HSBC Bank logo" loading="lazy" width="112" height="56" class="border border-gray-darken-2 p-1 w-18 h-12 w-md-21 h-md-15 rounded-lg rounded-md-xl object-contain" src="./assets/images/others/hsbc-bank.png">
+                    </div>
+
+                    <div class="flex justify-space-between bottom-3 left-3 right-3 absolute items-center">
+                        <div class="inline-flex bg-white text-danger h-30px px-2 font-semibold fs-md-15px fs-12px rounded items-center justify-center">
+                            <span class="mdi mdi-clock-outline me-2 fs-18px"></span>
+                            Deals ends in 23: 59: 59
+                        </div>
+
+                        <button type="button" class="btn px-4 rounded bg-white rounded-lg text-ck-blue font-semibold fs-12px fs-md-18px h-md-40px h-28px px-4 py-1-5" aria-label="Apply for HSBC credit card">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative">
+            <div class="flex items-center justify-center overflow-hidden rounded-xl w-full h-full cursor-pointer">
+                <div class="w-full h-full">
+                    <img alt="Offer: Special rewards on HDFC credit cards" loading="lazy" width="302" height="224" class="w-full h-full object-contain rounded-xl" src="./assets/images/others/hdfc.png">
+                </div>
+
+                <div class="absolute inset-0 z-10 w-full">
+                    <div class="absolute top-3 left-3 rounded-lg rounded-md-xl bg-white overflow-hidden">
+                        <img alt="HDFC Bank logo" loading="lazy" width="112" height="56" class="border border-gray-darken-2 p-1 w-18 h-12 w-md-21 h-md-15 rounded-lg rounded-md-xl object-contain" src="./assets/images/others/hdfc-bank.png">
+                    </div>
+
+                    <div class="flex justify-space-between bottom-3 left-3 right-3 absolute items-center">
+                        <div class="inline-flex bg-white text-danger h-30px px-2 font-semibold fs-md-15px fs-12px rounded items-center justify-center">
+                            <span class="mdi mdi-clock-outline me-2 fs-18px"></span>
+                            Deals ends in 23: 59: 59
+                        </div>
+
+                        <button type="button" class="btn px-4 rounded bg-white rounded-lg text-ck-blue font-semibold fs-12px fs-md-18px h-md-40px h-28px px-4 py-1-5" aria-label="Apply for HDFC credit card">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative">
+            <div class="flex items-center justify-center overflow-hidden rounded-xl w-full h-full cursor-pointer">
+                <div class="w-full h-full">
+                    <img alt="Offer: Flat ₹1500 CashKaro Rewards on Axis Flipkart Card Activation" loading="lazy" width="302" height="224" class="w-full h-full object-contain rounded-xl" src="./assets/images/others/axis-card.png">
+                </div>
+
+                <div class="absolute inset-0 z-10 w-full">
+                    <div class="absolute top-3 left-3 rounded-lg rounded-md-xl bg-white overflow-hidden">
+                        <img alt="Axis Bank logo" loading="lazy" width="112" height="56" class="border border-gray-darken-2 p-1 w-18 h-12 w-md-21 h-md-15 rounded-lg rounded-md-xl object-contain" src="./assets/images/others/axis-bank.png">
+                    </div>
+
+                    <div class="flex justify-space-between bottom-3 left-3 right-3 absolute items-center">
+                        <div class="inline-flex bg-white text-danger h-30px px-2 font-semibold fs-md-15px fs-12px rounded items-center justify-center">
+                            <span class="mdi mdi-clock-outline me-2 fs-18px"></span>
+                            Deals ends in 23: 59: 59
+                        </div>
+
+                        <button type="button" class="btn px-4 rounded bg-white rounded-lg text-ck-blue font-semibold fs-12px fs-md-18px h-md-40px h-28px px-4 py-1-5" aria-label="Apply for Axis Flipkart Credit Card">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative">
+            <div class="flex items-center justify-center overflow-hidden rounded-xl w-full h-full cursor-pointer">
+                <div class="w-full h-full">
+                    <img alt="Offer: Flat ₹1500 CashKaro Rewards on Axis Flipkart Card Activation" loading="lazy" width="302" height="224" class="w-full h-full object-contain rounded-xl" src="./assets/images/others/axis-card.png">
+                </div>
+
+                <div class="absolute inset-0 z-10 w-full">
+                    <div class="absolute top-3 left-3 rounded-lg rounded-md-xl bg-white overflow-hidden">
+                        <img alt="Axis Bank logo" loading="lazy" width="112" height="56" class="border border-gray-darken-2 p-1 w-18 h-12 w-md-21 h-md-15 rounded-lg rounded-md-xl object-contain" src="./assets/images/others/axis-bank.png">
+                    </div>
+
+                    <div class="flex justify-space-between bottom-3 left-3 right-3 absolute items-center">
+                        <div class="inline-flex bg-white text-danger h-30px px-2 font-semibold fs-md-15px fs-12px rounded items-center justify-center">
+                            <span class="mdi mdi-clock-outline me-2 fs-18px"></span>
+                            Deals ends in 23: 59: 59
+                        </div>
+
+                        <button type="button" class="btn px-4 rounded bg-white rounded-lg text-ck-blue font-semibold fs-12px fs-md-18px h-md-40px h-28px px-4 py-1-5" aria-label="Apply for Axis Flipkart Credit Card">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Scripts -->
+     <script>
+(function () {
+    const shell  = document.querySelector('.searchbar');
+    const input  = document.getElementById('searchInput');
+    const panel  = document.getElementById('searchPanel');
+
+    const openPanel = () => {
+      panel.classList.add('is-open');
+      input.setAttribute('aria-expanded', 'true');
+    };
+
+    const closePanel = () => {
+      panel.classList.remove('is-open');
+      input.setAttribute('aria-expanded', 'false');
+    };
+
+    // Open on focus and while typing
+    input.addEventListener('focus', openPanel);
+    input.addEventListener('input', openPanel);
+
+    // Close when clicking outside the shell (input or panel)
+    document.addEventListener('mousedown', (e) => {
+      if (!shell.contains(e.target)) closePanel();
+    });
+
+    // Close on Escape
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePanel();
+    });
+  })();
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const closeMenu = document.getElementById('closeMenu');
+const sideMenu = document.getElementById('sideMenu');
+const overlay = document.getElementById('overlay');
+
+hamburgerBtn.addEventListener('click', () => {
+  sideMenu.classList.add('open');
+  overlay.classList.add('show');
+});
+
+closeMenu.addEventListener('click', () => {
+  sideMenu.classList.remove('open');
+  overlay.classList.remove('show');
+});
+
+overlay.addEventListener('click', () => {
+  sideMenu.classList.remove('open');
+  overlay.classList.remove('show');
+});
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+</body>
+</html>

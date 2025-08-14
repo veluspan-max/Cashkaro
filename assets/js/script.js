@@ -56,7 +56,7 @@ $(document).ready(function() {
       { breakpoint: 1370, settings: { slidesToShow: 5, slidesToScroll: 3, dots: true, arrows: false, rows: 2 } },
       { breakpoint: 1024, settings: { slidesToShow: 3.2, slidesToScroll: 2, rows: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 2, dots: true, arrows: false, rows: 1 } },
-      { breakpoint: 480, settings: { slidesToShow: 1.8, slidesToScroll: 2, dots: true, arrows: false, rows: 1 } }
+      { breakpoint: 480, settings: { slidesToShow: 2.2, slidesToScroll: 2, dots: true, arrows: false, rows: 1 } }
     ]
   });
 

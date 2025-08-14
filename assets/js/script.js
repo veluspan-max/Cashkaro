@@ -75,7 +75,7 @@ $(document).ready(function() {
       { breakpoint: 1024, settings: { slidesToShow: 4.7, slidesToScroll: 4, dots: true, arrows: false } },
       { breakpoint: 768, settings: { slidesToShow: 3.5, slidesToScroll: 4, dots: true, arrows: false } },
       { breakpoint: 600, settings: { slidesToShow: 2.8, slidesToScroll: 3, dots: true, arrows: false } },
-      { breakpoint: 480, settings: { slidesToShow: 2.8, slidesToScroll: 3, dots: true, arrows: false } }
+      { breakpoint: 480, settings: { slidesToShow: 2.8, slidesToScroll: 3.5, dots: true, arrows: false } }
     ]
   });
 
